@@ -11,12 +11,12 @@ const createChef = async () => {
 // create Recipe
 const createRecipe = async () => {
   const oneRecipe = await Recipe.create({
-    title: 'Banana Bread',
-    category: 'Sweets',
-    ingredients: 'banana, flour, sugar',
-    instructions: 'mix and bake',
-    tips: 'add some cinnamon',
-    images: 'test',
+    title: 'steak',
+    category: 'dinner',
+    ingredients: 'rib-eye, herbs and butter',
+    instructions: 'sear, oven, rest and eat',
+    tips: 'make a sauce or herb butter',
+    images: 'steak pict',
     chef_id: 1
   })
   console.log(oneRecipe)
@@ -24,9 +24,9 @@ const createRecipe = async () => {
 // Create Food Story
 const createStory = async () => {
   const oneStory = await Stories.create({
-    title: 'Omakase during Pandemic',
-    story: 'Ishikawa - sushi heaven',
-    images: 'sushi',
+    title: 'pizza, always a good option',
+    story: 'NY style VS neopolitian',
+    images: 'pizza',
     chef_id: 1
   })
   console.log(oneStory)
@@ -85,7 +85,14 @@ const updateStory = async () => {
   console.log(story)
 }
 
-// DELETE
+// DELETE RECIPE
+const deleteRecipe = async () => {
+  await Recipe.destroy({ where: { id: 0 } })
+}
+// DELETE STORY
+const deleteStory = async () => {
+  await Stories.destroy({ where: { id: 0 } })
+}
 
 
 const run = async () => {
@@ -98,7 +105,9 @@ const run = async () => {
     //  await getOneRecipe() 
     // await getOneStory()
     //await updateRecipe()
-   // await updateStory() 
+    // await updateStory() 
+    // await deleteRecipe()
+    //await deleteStory()
 
   } catch (error) {
     throw error
