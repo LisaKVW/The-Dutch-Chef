@@ -31,22 +31,39 @@ const createStory = async () => {
   })
   console.log(oneStory)
 }
-  // GET
+// GET ALL Recipes
+const getRecipes = async () => {
+  const recipes = await Recipe.findAll({
+  })
+  console.log(recipes)
+}
+// GET ALL Stories
+const getStories = async () => {
+  const stories = await Stories.findAll({
+  })
+  console.log(stories)
+}
 
-  //UPDATE
+// GET ONE recipe
 
-  // DELETE
+// GET ONE Story
+
+//UPDATE
+
+// DELETE
 
 
-  const run = async () => {
-    try {
-      // await createChef()
-      // await createRecipe()
-      await createStory()
+const run = async () => {
+  try {
+    // await createChef()
+    // await createRecipe()
+    // await createStory()
+   // await getRecipes() 
+  // await getStories()
 
-    } catch (error) {
-      throw error
-    }
+  } catch (error) {
+    throw error
   }
+}
 
-  run()
+run()
