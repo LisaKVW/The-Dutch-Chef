@@ -45,8 +45,17 @@ const getStories = async () => {
 }
 
 // GET ONE recipe
-
+const getOneRecipe = async () => {
+  const recipe = await Recipe.findOne({ where: { id: 1 } })
+  // stringer(recipe)
+  console.log(recipe)
+}
 // GET ONE Story
+const getOneStory = async () => {
+  const story = await Stories.findOne({ where: { id: 1 } })
+  // stringer(recipe)
+  console.log(story)
+}
 
 //UPDATE
 
@@ -60,6 +69,8 @@ const run = async () => {
     // await createStory()
    // await getRecipes() 
   // await getStories()
+  //  await getOneRecipe() 
+    await getOneStory()
 
   } catch (error) {
     throw error
