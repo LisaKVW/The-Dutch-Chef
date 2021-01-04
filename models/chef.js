@@ -26,7 +26,6 @@ module.exports = (sequelize, DataTypes) => {
   };
   Chef.init({
     name: DataTypes.STRING,
-    type: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Chef',
