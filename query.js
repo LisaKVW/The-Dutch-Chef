@@ -56,8 +56,34 @@ const getOneStory = async () => {
   // stringer(recipe)
   console.log(story)
 }
+//UPDATE RECIPE
+const updateRecipe = async () => {
+  const recipe = await Recipe.update(
+    {
+      title: 'Banana Bread with choc',
+      category: 'Sweets',
+      ingredients: 'banana, flour, sugar',
+      instructions: 'mix and bake',
+      tips: 'add some Nutella swirls',
+      images: 'test BANANA',
+    },
+    { where: { id: 1 }, returning: true }
+  )
+  console.log(recipe)
+}
 
-//UPDATE
+// UPDATE STORIES
+const updateStory = async () => {
+  const story = await Stories.update(
+    {
+      title: 'Omakase during Covid-19',
+      story: 'Ishikawa - sushi heaven - love the truffle touches',
+      images: 'sushi',
+    },
+    { where: { id: 1 }, returning: true }
+  )
+  console.log(story)
+}
 
 // DELETE
 
@@ -67,10 +93,12 @@ const run = async () => {
     // await createChef()
     // await createRecipe()
     // await createStory()
-   // await getRecipes() 
-  // await getStories()
-  //  await getOneRecipe() 
-    await getOneStory()
+    // await getRecipes() 
+    // await getStories()
+    //  await getOneRecipe() 
+    // await getOneStory()
+    //await updateRecipe()
+   // await updateStory() 
 
   } catch (error) {
     throw error
