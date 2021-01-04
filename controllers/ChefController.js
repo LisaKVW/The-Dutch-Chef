@@ -10,6 +10,15 @@ const CreateChef = async (req, res) => {
   }
 }
 
+const getOneChef = async (req, res) => {
+  try {
+    const oneChef = await Chef.findByPk(req.params.chef_id) //findByPk - find by primary key
+    res.send(oneChef)
+  } catch (error) { }
+  throw error
+}
+
 module.exports = {
-  CreateChef
+  CreateChef,
+  getOneChef
 }

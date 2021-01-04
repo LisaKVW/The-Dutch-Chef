@@ -1,6 +1,8 @@
 const Router = require('express').Router()
 const controller = require('../controllers/ChefController')
 
-Router.get('/chef', controller.CreateChef)
+Router.post('/hire', controller.CreateChef)  // in insomnia - POST: http://localhost:3004/api/chef/hire   - CREATE CHEF
+Router.get('/chef', controller.getOneChef)  // in insomnia - GET: http://localhost:3004/api/chef/chef  -  with the CHEF, you make recipe/story
+
 
 module.exports = Router
