@@ -10,7 +10,7 @@ By: Lisa Venneker Wand
 
 
 ## Description
-App find delicious recipes and read restaurant reviews.
+Site to find delicious recipes and read restaurant reviews.
 
 
 ## Technologies used
