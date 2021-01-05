@@ -16,8 +16,10 @@ const getOneRecipe = async (req, res) => {
   try {
     const oneRecipe = await Recipe.findByPk(req.params.recipe_id) //findByPk - find by primary key
     res.send(oneRecipe)
-  } catch (error) { }
+  } catch (error) { 
   throw error
+    // console.log("line21", error) 
+  }
 }
 
 //in insomenia - GET: http://localhost:3004/api/recipe/view
