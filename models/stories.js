@@ -20,7 +20,12 @@ module.exports = (sequelize, DataTypes) => {
   };
   Stories.init({
     title: DataTypes.STRING,
-    story: DataTypes.STRING,
+    story: {
+      type: DataTypes.TEXT,
+      get: function (value) {
+        return this.getDataValue(value).split('\n')
+      }
+    },
     image: DataTypes.STRING,
     chefID: {
       type: DataTypes.INTEGER,
