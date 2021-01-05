@@ -14,7 +14,7 @@ export const __UploadStory = async (formData, userId) => {
 // get Recipe - show main image and title only, like all dinner items
 export const __GetStories = async () => {
   try {
-    const res = await ApiClient.get(`/stories`)
+    const res = await ApiClient.get(`/stories/view`)
     return res.data
   } catch (error) {
     throw error
@@ -22,9 +22,9 @@ export const __GetStories = async () => {
 }
 
 // click on recipe - and go next page to find recipe details
-export const __GetPostById = async (storiesId) => {
+export const __GetStoryById = async (storiesId) => {
   try {
-    const res = await ApiClient.get(`/stories/${storiesId}`)
+    const res = await ApiClient.get(`/stories/view/${storiesId}`)
     return res.data
   } catch (error) {
     throw error
@@ -32,7 +32,7 @@ export const __GetPostById = async (storiesId) => {
 }
 
 //update recipe
-export const __UpdatePost = async (formData, storiesId) => {
+export const __UpdateStory = async (formData, storiesId) => {
   try {
     const res = await ApiClient.put(`/stories/${storiesId}`, formData)
     console.log(res.data)
@@ -43,7 +43,7 @@ export const __UpdatePost = async (formData, storiesId) => {
 }
 
 // delete recipe
-export const __DeletePost = async (storiesId) => {
+export const __DeleteStory = async (storiesId) => {
   try {
     const res = await ApiClient.delete(`/stories/${storiesId}`)
     return res

@@ -1,6 +1,7 @@
 import './App.css';
 import { Switch, Route, withRouter } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
+import Recipe from './pages/Recipe'
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
           <Route
             exact path="/"
             component={LandingPage}
+          />
+          <Route
+            path="/"
+            component={Recipe}
           />
         </Switch>
       </main>

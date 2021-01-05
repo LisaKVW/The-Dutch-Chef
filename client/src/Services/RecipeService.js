@@ -11,9 +11,10 @@ export const __UploadRecipe = async (formData, userId) => {
 }
 
 // get Recipe - show main image and title only, like all dinner items
-export const __GetPosts = async () => {
+export const __GetRecipe = async () => {
   try {
-    const res = await ApiClient.get(`/recipe`)
+    const res = await ApiClient.get(`/recipe/view`)
+    console.log('recipe service get', res)
     return res.data
   } catch (error) {
     throw error
@@ -21,9 +22,9 @@ export const __GetPosts = async () => {
 }
 
 // click on recipe - and go next page to find recipe details
-export const __GetPostById = async (recipeId) => {
+export const __GetRecipeById = async (recipeId) => {
   try {
-    const res = await ApiClient.get(`/recipe/${recipeId}`)
+    const res = await ApiClient.get(`/recipe/view/${recipeId}`)
     return res.data
   } catch (error) {
     throw error
@@ -31,7 +32,7 @@ export const __GetPostById = async (recipeId) => {
 }
 
 //update recipe
-export const __UpdatePost = async (formData, recipeId) => {
+export const __UpdateRecipe = async (formData, recipeId) => {
   try {
     const res = await ApiClient.put(`/recipe/${recipeId}`, formData)
     console.log(res.data)
@@ -42,7 +43,7 @@ export const __UpdatePost = async (formData, recipeId) => {
 }
 
 // delete recipe
-export const __DeletePost = async (recipeId) => {
+export const __DeleteRecipe = async (recipeId) => {
   try {
     const res = await ApiClient.delete(`/recipe/${recipeId}`)
     return res
