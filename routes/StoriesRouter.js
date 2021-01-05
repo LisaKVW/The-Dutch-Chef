@@ -1,7 +1,7 @@
 const Router = require('express').Router()
 const controller = require('../controllers/StoriesController')
 
-Router.post('/:user_id', controller.CreateStory)
+Router.post('/:chef_id', controller.CreateStory)
 Router.get('/view/:stories_id', controller.getOneStory)
 Router.get('/view', controller.GetAllStories)
 Router.put('/:stories_id', controller.UpdateStory)

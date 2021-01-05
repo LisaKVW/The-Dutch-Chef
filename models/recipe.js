@@ -21,8 +21,18 @@ module.exports = (sequelize, DataTypes) => {
   Recipe.init({
     title: DataTypes.STRING,
     catergory: DataTypes.STRING,
-    ingredients: DataTypes.STRING,
-    instructions: DataTypes.STRING,
+    ingredients: {
+      type: DataTypes.TEXT,
+      get: function (value) {
+        return this.getDataValue(value).split('\n')
+      }
+    },
+    instructions: {
+      type: DataTypes.TEXT,
+      get: function (value) {
+        return this.getDataValue(value).split('\n')
+      }
+    },
     tips: DataTypes.STRING,
     images: DataTypes.STRING,
     chefID: {

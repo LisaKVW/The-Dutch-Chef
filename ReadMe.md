@@ -40,6 +40,8 @@ Screenshots of site to follow
 
 ## Credits
 - https://www.lucidchart.com/pages
+- https://icons8.com/
+- https://www.invisionapp.com/freehand 
 
 ## Future updates
 - 
