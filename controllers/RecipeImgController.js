@@ -1,6 +1,7 @@
 const { RecipeImg } = require('../models')
 
-//insomnia test- POST:  http://localhost:3004/api/image/add  -number is id of chef - so ALWAYS 1, only 1 chef
+  // / add /: recipe_id'
+//insomnia test- POST:  http://localhost:3004/api/image/add/recipe_id  -number is id of chef - so ALWAYS 1, only 1 chef
 const CreateRecipeImg = async (req, res) => {
   try {
     const newPhoto = await RecipeImg.create(req.body)

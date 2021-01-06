@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { __GetRecipe } from '../Services/RecipeService'
+import { __GetRecipeImg } from '../Services/RecipeImgService'
 import NavBar from '../components/NavBar'
 
 
@@ -10,6 +11,7 @@ const RecipeDetails = (props) => {
   const [ingredients, setIngredients] = useState([])
   const [instructions, setInstructions] = useState([])
   const [tips, setTips] = useState([])
+  const [image, setImage] = useState([])
   // const [image, setImage] = useState([])
 
 
@@ -17,6 +19,9 @@ const RecipeDetails = (props) => {
     const getRecipe = async (props) => {
       const recipeList = await __GetRecipe(props)
       setRecipes(recipeList)
+
+      const recipeImg = await __GetRecipeImg(props)
+      console.log(recipeImg)
     }
     getRecipe()
   }, [])
