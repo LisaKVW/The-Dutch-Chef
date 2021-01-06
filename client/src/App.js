@@ -3,6 +3,7 @@ import { Switch, Route, withRouter } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import Recipe from './pages/Recipe'
 import RecipeDetails from './pages/RecipeDetails'
+import Stories from './pages/Stories'
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
           <Route
             path="/recipeDetails"
             component={RecipeDetails}
+          />
+          <Route
+            path="/food-stories"
+            component={Stories}
           />
         </Switch>
       </main>

@@ -18,7 +18,7 @@ const Recipe = (props) => {
   return (
     <div>
       <NavBar />
-      <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5vh", margin: "0 auto" }}>
+      <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5.3vh", margin: "0 auto" }}>
         <div className="row">
           <div className="col s12 m7" style={{ width: "85%" }}>
             <div className="card" style={{ backgroundColor: "black" }}>

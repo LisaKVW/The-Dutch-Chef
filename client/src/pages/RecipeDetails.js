@@ -17,9 +17,11 @@ const RecipeDetails = (props) => {
   useEffect(() => {
     const getRecipe = async (props) => {
       const recipeList = await __GetRecipe(props)
+      console.log(recipeList)
       setRecipes(recipeList)
 
       const recipeImgList = await __GetRecipeImg(props)
+      console.log(recipeImgList)
       setImageData(recipeImgList)
     }
     getRecipe()
@@ -31,25 +33,31 @@ const RecipeDetails = (props) => {
   return (
     <div>
       <NavBar />
-      {recipes.map((recipe) => {
-        const { title, ingredients, instructions, tips } = recipe
-        return (
-          <div>
-            <h2> {title} </h2>
-            <p> {ingredients} </p>
-            <p> {instructions}</p>
-            <p> {tips} </p>
-          </div>
-        )
-      })}
-      {imageData.map((pict) => {
-        const { image } = pict
-        return (
-          <div>
-            <img src={image} />
-          </div>
-        )
-      })}
+      <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5vh", margin: "0 auto" }}>
+        <div className="left-col">
+          {recipes.map((recipe) => {
+            const { title, ingredients, instructions, tips } = recipe
+            return (
+              <div>
+                <h2> {title} </h2>
+                <p> {ingredients} </p>
+                <p> {instructions}</p>
+                <p> {tips} </p>
+              </div>
+            )
+          })}
+        </div>
+        <div className="right-col">
+          {imageData.map((pict) => {
+            const { image } = pict
+            return (
+              <div>
+                <img src={image} style={{ width: "85%", height: "95%", borderRadius: "4px" }} />
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </div>
   )
 }

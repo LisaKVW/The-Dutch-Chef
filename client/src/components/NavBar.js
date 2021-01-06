@@ -10,7 +10,7 @@ const NavBar = (props) => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/recipe">Recipes</Link></li>
           <li><Link to="/recipeDetails">Recipes DETAILS</Link></li>
-          <li><Link to="food-stories">Food Stories</Link></li>
+          <li><Link to="/food-stories">Food Stories</Link></li>
         </ul>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li><Link to="/About-me">About Me </Link></li>
