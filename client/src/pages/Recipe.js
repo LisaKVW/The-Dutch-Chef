@@ -18,7 +18,7 @@ const Recipe = (props) => {
   return (
     <div>
       <NavBar />
-      <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "20px" }}>
+      <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5vh", margin: "0 auto" }}>
         <div className="row">
           <div className="col s12 m7" style={{ width: "85%" }}>
             <div className="card" style={{ backgroundColor: "black" }}>
@@ -34,7 +34,7 @@ const Recipe = (props) => {
 
         <div className="row">
           <div className="col s12 m7" style={{ width: "85%" }}>
-            <div className="card">
+            <div className="card" style={{ backgroundColor: "black" }}>
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
               </div>
@@ -47,7 +47,7 @@ const Recipe = (props) => {
 
         <div className="row">
           <div className="col s12 m7" style={{ width: "85%" }}>
-            <div className="card">
+            <div className="card" style={{ backgroundColor: "black" }}>
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
               </div>
@@ -60,7 +60,7 @@ const Recipe = (props) => {
 
         <div className="row">
           <div className="col s12 m7" style={{ width: "85%" }}>
-            <div className="card">
+            <div className="card" style={{ backgroundColor: "black" }}>
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
               </div>
