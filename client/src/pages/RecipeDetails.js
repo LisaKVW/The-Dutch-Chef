@@ -37,7 +37,7 @@ const RecipeDetails = (props) => {
         <div className="left-col">
           {recipes.map((recipe) => {
             const { title, ingredients, instructions, tips, category } = recipe
-            if (category === "Lunch") {
+            if (category === "Sweets") {
               return (
                 <div>
                   <h2> {title} </h2>

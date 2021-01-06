@@ -6,6 +6,8 @@ import RecipeDetails from './pages/RecipeDetails'
 import Stories from './pages/Stories'
 import Breakfast from './pages/Breakfast'
 import Lunch from './pages/Lunch'
+import Dinner from './pages/Dinner'
+import Sweets from './pages/Sweets'
 
 function App() {
   return (
@@ -35,6 +37,14 @@ function App() {
           <Route
             path="/lunch"
             component={Lunch}
+          />
+          <Route
+            path="/dinner"
+            component={Dinner}
+          />
+          <Route
+            path="/sweets"
+            component={Sweets}
           />
         </Switch>
       </main>
