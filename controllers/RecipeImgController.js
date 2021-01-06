@@ -13,3 +13,9 @@ const CreateRecipeImg = async (req, res) => {
 module.exports = {
   CreateRecipeImg
 }
+
+// in insomnia:
+// {
+//   "image": "https://i.imgur.com/79Up2tZ.jpg",
+//     "recipe_id": 1
+// }

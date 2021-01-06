@@ -10,13 +10,14 @@ const CreateChef = async (req, res) => {
     throw error
   }
 }
-// in insomnia - GET: http://localhost:3004/api/chef/chef  -  with the CHEF, you make recipe/story
+// in insomnia - GET: http://localhost:3004/api/chef/chef_id  -  with the CHEF, you make recipe/story
 const getOneChef = async (req, res) => {
   try {
     const oneChef = await Chef.findByPk(req.params.chef_id) //findByPk - find by primary key
     res.send(oneChef)
-  } catch (error) { }
+  } catch (error) { 
   throw error
+  }
 }
 
 module.exports = {
