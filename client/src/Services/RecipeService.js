@@ -2,19 +2,18 @@ import ApiClient from './ApiClient'
 
 // this to AddNew Recipe
 export const __UploadRecipe = async (formData, userId) => {
-    try {
-        const res = await ApiClient.post(`/recipe/${userId}`, formData)
-        return res.data
-    } catch (error) {
-        throw error
-    }
+  try {
+    const res = await ApiClient.post(`/recipe/${userId}`, formData)
+    return res.data
+  } catch (error) {
+    throw error
+  }
 }
 
 // get Recipe - show main image and title only, like all dinner items
 export const __GetRecipe = async () => {
   try {
     const res = await ApiClient.get(`/recipe/view`)
-    console.log('recipe service get', res)
     return res.data
   } catch (error) {
     throw error

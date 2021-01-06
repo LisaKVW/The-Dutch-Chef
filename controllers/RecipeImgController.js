@@ -10,8 +10,30 @@ const CreateRecipeImg = async (req, res) => {
   }
 }
 
+const getOneRecipeImg = async (req, res) => {
+  try {
+    const oneRecipeImg = await RecipeImg.findByPk(req.params.recipe_img_id) //findByPk - find by primary key
+    res.send(oneRecipeImg)
+  } catch (error) {
+    throw error
+    // console.log("line21", error) 
+  }
+}
+
+//in insomenia - GET: http://localhost:3004/api/recipe/view
+const GetAllRecipesImgs = async (req, res) => {
+  try {
+    const allRecipesImgs = await RecipeImg.findAll()
+    res.send(allRecipesImgs)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
-  CreateRecipeImg
+  CreateRecipeImg,
+  getOneRecipeImg,
+  GetAllRecipesImgs
 }
 
 // in insomnia:
