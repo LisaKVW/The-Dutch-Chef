@@ -11,19 +11,16 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
-      catergory: {
+      category: {
         type: Sequelize.STRING
       },
       ingredients: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       instructions: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       tips: {
-        type: Sequelize.STRING
-      },
-      images: {
         type: Sequelize.STRING
       },
       createdAt: {

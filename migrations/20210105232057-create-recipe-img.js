@@ -1,21 +1,23 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('stories', {
+    await queryInterface.createTable('recipe_imgs', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      title: {
-        type: Sequelize.STRING
-      },
-      story: {
-        type: Sequelize.TEXT
-      },
       image: {
         type: Sequelize.STRING
+      },
+      RecipeId: {
+        type: Sequelize.INTEGER,
+        field: 'recipe_id', 
+        references: {
+          model: 'recipes',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
@@ -24,18 +26,10 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      chefID: {
-        type: Sequelize.INTEGER,
-        field: 'chef_id',
-        references: {
-          model: 'chefs',
-          key: 'id'
-        }
       }
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('stories');
+    await queryInterface.dropTable('recipe_imgs');
   }
 };

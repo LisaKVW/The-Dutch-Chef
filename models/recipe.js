@@ -15,12 +15,17 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'chef_id',
         onDelete: 'cascade',
         onUpdate: 'cascade'
-      })
+      }),
+        Recipe.hasMany(models.RecipeImg, {
+          foreignKey: 'recipe_id',
+          onDelete: 'cascade',
+          onUpdate: 'cascade'
+        })
     }
   };
   Recipe.init({
     title: DataTypes.STRING,
-    catergory: DataTypes.STRING,
+    category: DataTypes.STRING,
     ingredients: {
       type: DataTypes.TEXT,
       get: function (value) {
@@ -34,7 +39,6 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     tips: DataTypes.STRING,
-    images: DataTypes.STRING,
     chefID: {
       type: DataTypes.INTEGER,
       field: 'chef_id',
