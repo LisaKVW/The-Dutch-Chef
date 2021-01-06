@@ -11,8 +11,7 @@ const RecipeDetails = (props) => {
   const [ingredients, setIngredients] = useState([])
   const [instructions, setInstructions] = useState([])
   const [tips, setTips] = useState([])
-  const [image, setImage] = useState([])
-  // const [image, setImage] = useState([])
+  const [imageData, setImageData] = useState([])
 
 
   useEffect(() => {
@@ -20,8 +19,8 @@ const RecipeDetails = (props) => {
       const recipeList = await __GetRecipe(props)
       setRecipes(recipeList)
 
-      const recipeImg = await __GetRecipeImg(props)
-      console.log(recipeImg)
+      const recipeImgList = await __GetRecipeImg(props)
+      setImageData(recipeImgList)
     }
     getRecipe()
   }, [])
@@ -43,8 +42,18 @@ const RecipeDetails = (props) => {
           </div>
         )
       })}
+      {imageData.map((pict) => {
+        const { image } = pict
+        return (
+          <div>
+            <img src={image} />
+          </div>
+        )
+      })}
     </div>
   )
 }
 
 export default RecipeDetails
+
+// image had to be single as in the model we called it image
