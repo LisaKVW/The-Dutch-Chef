@@ -4,6 +4,8 @@ import LandingPage from './pages/LandingPage'
 import Recipe from './pages/Recipe'
 import RecipeDetails from './pages/RecipeDetails'
 import Stories from './pages/Stories'
+import Breakfast from './pages/Breakfast'
+import Lunch from './pages/Lunch'
 
 function App() {
   return (
@@ -25,6 +27,14 @@ function App() {
           <Route
             path="/food-stories"
             component={Stories}
+          />
+          <Route
+            path="/breakfast"
+            component={Breakfast}
+          />
+          <Route
+            path="/lunch"
+            component={Lunch}
           />
         </Switch>
       </main>

@@ -4,7 +4,7 @@ import { __GetRecipeImg } from '../Services/RecipeImgService'
 import NavBar from '../components/NavBar'
 
 
-const RecipeDetails = (props) => {
+const Breakfast = (props) => {
   const [recipes, setRecipes] = useState([])
   const [title, setTitle] = useState([])
   const [category, setCategory] = useState([])
@@ -37,7 +37,7 @@ const RecipeDetails = (props) => {
         <div className="left-col">
           {recipes.map((recipe) => {
             const { title, ingredients, instructions, tips, category } = recipe
-            if (category === "Lunch") {
+            if (category === "Breakfast") {
               return (
                 <div>
                   <h2> {title} </h2>
@@ -64,6 +64,6 @@ const RecipeDetails = (props) => {
   )
 }
 
-export default RecipeDetails
+export default Breakfast
 
 // image had to be single as in the model we called it image

@@ -4,7 +4,7 @@ import { __GetRecipeImg } from '../Services/RecipeImgService'
 import NavBar from '../components/NavBar'
 
 
-const RecipeDetails = (props) => {
+const Lunch = (props) => {
   const [recipes, setRecipes] = useState([])
   const [title, setTitle] = useState([])
   const [category, setCategory] = useState([])
@@ -64,6 +64,6 @@ const RecipeDetails = (props) => {
   )
 }
 
-export default RecipeDetails
+export default Lunch
 
 // image had to be single as in the model we called it image
