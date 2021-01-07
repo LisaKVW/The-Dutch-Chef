@@ -4,10 +4,11 @@ import { __GetRecipe } from './Services/RecipeService'
 import './App.css';
 import { Switch, Route, withRouter } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
-import Recipe from './pages/Recipe'
+import RecipeTypes from './pages/RecipeTypes'
 import Stories from './pages/Stories'
-import BreakfastSingleRecipe from './pages/BreakfastSingleRecipe'
+import SingleRecipe from './pages/SingleRecipe'
 import Category from './pages/Category'
+import Navbar from './components/NavBar'
 
 function App(props) {
   const [recipes, setRecipes] = useState([])
@@ -15,6 +16,7 @@ function App(props) {
   const [lunches, setLunches] = useState([])
   const [dinners, setDinners] = useState([])
   const [sweets, setSweets] = useState([])
+  //set state for each catergory recipe, so we can grab the props from it throughout app
 
   useEffect(() => {
     const getRecipe = async (props) => {
@@ -23,7 +25,6 @@ function App(props) {
       let lunches = []
       let dinners = []
       let sweets = []
-      console.log('list recipe', recipeList)
       recipeList.forEach(recipe => {
         if (recipe["category"] === "Breakfast") {
           breakfasts.push(recipe)
@@ -35,7 +36,6 @@ function App(props) {
           sweets.push(recipe)
         }
       })
-      console.log('app breaky', breakfasts)
       setBreakfasts(breakfasts)
       setLunches(lunches)
       setDinners(dinners)
@@ -54,6 +54,7 @@ function App(props) {
 
   return (
     <div className="App">
+      <Navbar />
       <main>
         <Switch>
           <Route
@@ -61,8 +62,8 @@ function App(props) {
             component={(props) => <LandingPage {...props} />}
           />
           <Route
-            path="/recipe"
-            component={(props) => <Recipe {...props} />}
+            path="/recipe-types"
+            component={(props) => <RecipeTypes {...props} />}
           />
           <Route
             path="/food-stories"
@@ -73,8 +74,8 @@ function App(props) {
             component={(props) => <Category categories={categories} {...props} />}
           />
           <Route
-            path="/breakfast-recipe"
-            component={BreakfastSingleRecipe}
+            path="/recipe/:dish_id"
+            component={SingleRecipe}
           />
         </Switch>
       </main>

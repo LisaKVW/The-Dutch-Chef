@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { __GetRecipe } from '../Services/RecipeService'
-import NavBar from '../components/NavBar'
 import { NavLink } from 'react-router-dom'
 
 
@@ -31,26 +30,26 @@ const Category = (props) => {
   }, [])
   // calling the service inside the useEffect - this to setState
   // invoking the getRecipe() to setState
-// added ternary because - useEffect runs after the return - so without ternary we would have an empty page
+  // added ternary because - useEffect runs after the return - so without ternary we would have an empty page
   return (!pageloaded ? <div></div> :
 
     <div>
-      <NavBar />
       <div className="grid-hold" style={{ width: "95%", margin: "auto" }}>
-        {chosenCategory.map(category => {
-          console.log('breaky 2', category)
+        {chosenCategory.map(dish => {
+          console.log('breaky 2', dish)
           return (
             <div class="card" style={{ backgroundColor: "black", width: "27%", margin: "auto" }}>
               <div class="card-image" >
-                {category.RecipeImgs.map((pict) => {
+                {dish.RecipeImgs.map((pict) => {
                   const { image } = pict
                   // console.log(pict)
                   return <img src={image} />
                 })}
-                <span class="card-title"> {category.title} </span>
+                <span class="card-title"> {dish.title} </span>
               </div>
               <div class="card-action">
-                {/* <NavLink to={{ pathname: "/breakfast-recipe", state: {} }}> See Recipe </NavLink> */}
+                <NavLink to={{ pathname: `/recipe/${dish.id}`, state: {} }}> See Recipe </NavLink>
+                {/* <NavLink title={category.title} to={{ pathname: "/recipe", state: {} }}> See Recipe </NavLink> */}
               </div>
             </div>
           )

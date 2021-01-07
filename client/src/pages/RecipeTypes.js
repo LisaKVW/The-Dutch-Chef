@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { __GetRecipe } from '../Services/RecipeService'
-import NavBar from '../components/NavBar'
 import { NavLink } from 'react-router-dom'
 
-const Recipe = (props) => {
+const RecipeTypes = (props) => {
   const [recipes, setRecipes] = useState([])
   const [category, setCategory] = useState([])  //breakfast, lunch, dinner, sweets
 
@@ -20,7 +19,6 @@ const Recipe = (props) => {
   console.log('breaky4', props)
   return (
     <div>
-      <NavBar />
       <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5.3vh", margin: "0 auto" }}>
         <div className="row">
           <div className="col s12 m7" style={{ width: "85%" }}>
@@ -83,7 +81,7 @@ const Recipe = (props) => {
   )
 }
 
-export default Recipe
+export default RecipeTypes
 
 // {
 //   recipes.map((recipe) => {

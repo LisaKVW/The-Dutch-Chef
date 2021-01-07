@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { __GetStories } from '../Services/StoriesService'
-import NavBar from '../components/NavBar'
 
 const Stories = (props) => {
   const [stories, setStories] = useState([])
@@ -19,7 +18,6 @@ const Stories = (props) => {
 
   return (
     <div>
-      <NavBar />
       {stories.map((oneStory) => {
         const { title, story, image } = oneStory
         return (
