@@ -40,7 +40,7 @@ const Sweets = (props) => {
             if (category === "Sweets") {
               return (
                 <div>
-                  <h2> {title} </h2>
+                  <h3> {title} </h3>
                   <p> Ingredients: {ingredients} </p>
                   <p> Instructions: {instructions}</p>
                   <p> Tips: {tips} </p>

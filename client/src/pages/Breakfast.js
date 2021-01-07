@@ -12,6 +12,7 @@ const Breakfast = (props) => {
   const [instructions, setInstructions] = useState([])
   const [tips, setTips] = useState([])
   const [imageData, setImageData] = useState([])
+  const [recipeId, setRecipeId] = useState([])
 
 
   useEffect(() => {
@@ -35,12 +36,13 @@ const Breakfast = (props) => {
       <NavBar />
       <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5vh", margin: "0 auto" }}>
         <div className="left-col">
-          {recipes.map((recipe) => {
+          {recipes.map((recipe, index) => {
             const { title, ingredients, instructions, tips, category } = recipe
+            console.log('recipe_id', recipe.id)
             if (category === "Breakfast") {
               return (
-                <div>
-                  <h2> {title} </h2>
+                <div key={index}>
+                  <h3> {title} </h3>
                   <p> Ingredients: {ingredients} </p>
                   <p> Instructions: {instructions}</p>
                   <p> Tips: {tips} </p>
@@ -51,12 +53,15 @@ const Breakfast = (props) => {
         </div>
         <div className="right-col">
           {imageData.map((pict) => {
-            const { image } = pict
-            return (
-              <div>
-                <img src={image} style={{ width: "85%", height: "95%", borderRadius: "4px" }} />
-              </div>
-            )
+            const { image, recipeId } = pict
+            console.log('line 57', recipeId)
+            if (recipeId === 'id') {
+              return (
+                <div>
+                  <img src={image} style={{ width: "85%", height: "95%", borderRadius: "4px" }} alt="food pict" />
+                </div>
+              )
+            }
           })}
         </div>
       </div>
