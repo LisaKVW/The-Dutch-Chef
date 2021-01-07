@@ -1,4 +1,6 @@
 const { Recipe } = require('../models')
+const { RecipeImg } = require('../models')
+
 
 //insomnia test- POST:  http://localhost:3004/api/recipe/1   -number is id of chef - so ALWAYS 1, only 1 chef
 const CreateRecipe = async (req, res) => {
@@ -16,16 +18,29 @@ const getOneRecipe = async (req, res) => {
   try {
     const oneRecipe = await Recipe.findByPk(req.params.recipe_id) //findByPk - find by primary key
     res.send(oneRecipe)
-  } catch (error) { 
-  throw error
+  } catch (error) {
+    throw error
     // console.log("line21", error) 
   }
 }
 
 //in insomenia - GET: http://localhost:3004/api/recipe/view
+// const GetAllRecipes = async (req, res) => {
+//   try {
+//     const allRecipes = await Recipe.findAll()
+//     res.send(allRecipes)
+//   } catch (error) {
+//     throw error
+//   }
+// }
+//changed GetAllRecipes to the below, so that when we pull the info from back to front we instantly get the images
 const GetAllRecipes = async (req, res) => {
   try {
-    const allRecipes = await Recipe.findAll()
+    const allRecipes = await Recipe.findAll({
+      include: [
+        { model: RecipeImg, attributes: ["image", "recipeId"] },
+      ],
+    })
     res.send(allRecipes)
   } catch (error) {
     throw error

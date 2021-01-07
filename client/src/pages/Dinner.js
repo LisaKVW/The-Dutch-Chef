@@ -35,28 +35,22 @@ const Dinner = (props) => {
       <NavBar />
       <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5vh", margin: "0 auto" }}>
         <div className="left-col">
-          {recipes.map((recipe) => {
-            const { title, ingredients, instructions, tips, category } = recipe
+          {recipes.map((recipe, index) => {
+            const { title, ingredients, instructions, tips, category, RecipeImgs } = recipe
+            console.log('recipe_id', recipe.id)
             if (category === "Dinner") {
               return (
-                <div>
+                <div key={index}>
                   <h3> {title} </h3>
+                  {RecipeImgs.map((pict) => (
+                    <img src={pict.image} style={{ width: "85%", height: "95%", borderRadius: "4px" }} />
+                  ))}
                   <p> Ingredients: {ingredients} </p>
                   <p> Instructions: {instructions}</p>
                   <p> Tips: {tips} </p>
                 </div>
               )
             }
-          })}
-        </div>
-        <div className="right-col">
-          {imageData.map((pict) => {
-            const { image } = pict
-            return (
-              <div>
-                <img src={image} style={{ width: "85%", height: "95%", borderRadius: "4px" }} />
-              </div>
-            )
           })}
         </div>
       </div>
