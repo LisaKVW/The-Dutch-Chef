@@ -16,7 +16,11 @@ const CreateRecipe = async (req, res) => {
 //in insomnia - GET: http://localhost:3004/api/recipe/view/1  -number is id of recipe
 const getOneRecipe = async (req, res) => {
   try {
-    const oneRecipe = await Recipe.findByPk(req.params.recipe_id) //findByPk - find by primary key
+    const oneRecipe = await Recipe.findByPk(req.params.recipe_id, {
+      include: [
+        { model: RecipeImg, attributes: ["image", "recipeId"] },
+      ],
+    })
     res.send(oneRecipe)
   } catch (error) {
     throw error

@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 
 
 const Category = (props) => {
-  console.log('breaky3', props)
   const [chosenCategory, setChosenCategory] = useState(null)
   const [pageloaded, setLoaded] = useState(false)
 
@@ -31,7 +30,7 @@ const Category = (props) => {
   // calling the service inside the useEffect - this to setState
   // invoking the getRecipe() to setState
   // added ternary because - useEffect runs after the return - so without ternary we would have an empty page
-  return (!pageloaded ? <div></div> :
+  return (!pageloaded ? <div> loading... </div> :
 
     <div>
       <div className="grid-hold" style={{ width: "95%", margin: "auto" }}>
