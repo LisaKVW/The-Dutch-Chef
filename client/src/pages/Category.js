@@ -34,8 +34,8 @@ const Category = (props) => {
 
     // <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5.3vh", margin: "0 auto" }}>
 
-    <div>
-      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "33% 33% 33%", width: "80%", marginTop: "5.3vh", margin: "0 auto" }}>
+    <div className="wrapper" style={{ margin: "0 auto" }}>
+      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "33% 33% 33%", width: "80%", marginTop: "6vh", margin: "0 auto" }}>
         {chosenCategory.map(dish => {
           console.log('breaky 2', dish)
           return (

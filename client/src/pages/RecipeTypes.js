@@ -21,7 +21,7 @@ const RecipeTypes = (props) => {
     <div>
       <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5.3vh", margin: "0 auto" }}>
         <div className="row">
-          <div className="col s12 m7" style={{ width: "85%" }}>
+          <div className="col s12 m7" style={{ width: "85%"}}>
             <div className="card" style={{ backgroundColor: "black" }}>
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/3724/food-morning-breakfast-orange-juice.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />

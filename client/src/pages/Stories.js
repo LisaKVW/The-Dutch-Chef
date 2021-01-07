@@ -21,7 +21,7 @@ const Stories = (props) => {
       {stories.map((oneStory) => {
         const { title, story, image } = oneStory
         return (
-          <div>
+          <div className="recipe-wrap" style={{ width: "80%", borderRadius: "14px", border: "1px solid red", marginLeft: "10%" }}>
             <h3>{title} </h3>
             <img src={image} style={{ width: "30%", height: "40%", borderRadius: "4px" }} />
             <p>{story} </p>

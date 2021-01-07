@@ -24,14 +24,14 @@ const SingleRecipe = (props) => {
 
 
   return (!myRecipe ? <div></div> :
-    <div>
+    <div className="recipe-wrap" style={{ width: "80%", borderRadius: "14px", border: "1px solid red", marginLeft: "10%" }}>
       <h3>{myRecipe.title}</h3>
       {myRecipe.RecipeImgs.map((image, index) => {
         return <img key={index} src={image.image} alt="food image" style={{ width: "35%", borderRadius: "5px" }} />
       })}
-      <p>{myRecipe.ingredients}</p>
-      <p>{myRecipe.instructions}</p>
-      <p>{myRecipe.tips}</p>
+      <p> <span style={{ fontWeight: "bold" }}> Ingredients: </span> {myRecipe.ingredients}</p>
+      <p> <span style={{ fontWeight: "bold" }}> Instructions: </span>  {myRecipe.instructions}</p>
+      <p> <span style={{ fontWeight: "bold" }}> Tips: </span>  {myRecipe.tips}</p>
     </div>
 
   )

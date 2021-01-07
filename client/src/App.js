@@ -9,6 +9,7 @@ import Stories from './pages/Stories'
 import SingleRecipe from './pages/SingleRecipe'
 import Category from './pages/Category'
 import Navbar from './components/NavBar'
+import 'materialize-css/dist/css/materialize.min.css'
 
 function App(props) {
   const [recipes, setRecipes] = useState([])
@@ -55,7 +56,7 @@ function App(props) {
   return (
     <div className="App">
       <Navbar />
-      <main>
+      <main style={{ margin: "auto", width: "50 %", border: "3px", padding: "10px" }}>
         <Switch>
           <Route
             exact path="/"
