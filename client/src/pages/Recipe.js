@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { __GetRecipe } from '../Services/RecipeService'
 import NavBar from '../components/NavBar'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Recipe = (props) => {
   const [recipes, setRecipes] = useState([])
@@ -14,7 +14,10 @@ const Recipe = (props) => {
     }
     getRecipeCategory()
   }, [])
-
+  
+  // by adding props to NavLink - we made the location path available inside of props
+  // Navlink is taking from our Category.js
+  console.log('breaky4', props)
   return (
     <div>
       <NavBar />
@@ -26,7 +29,8 @@ const Recipe = (props) => {
                 <img src="https://images.pexels.com/photos/3724/food-morning-breakfast-orange-juice.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
               </div>
               <div className="card-action">
-                <Link to="/breakfast"> Breakfast Recipes </Link>
+                <NavLink {...props} to={{ pathname: "/category", state: { category: "breakfast" } }}> Breakfast Recipes </NavLink>
+
               </div>
             </div>
           </div>
@@ -39,7 +43,8 @@ const Recipe = (props) => {
                 <img src="https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
               </div>
               <div className="card-action">
-                <Link to="/lunch"> Lunch Recipes </Link>
+                <NavLink {...props} to={{ pathname: "/category", state: { category: "lunch" } }}> Lunch Recipes </NavLink>
+
               </div>
             </div>
           </div>
@@ -52,7 +57,8 @@ const Recipe = (props) => {
                 <img src="https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
               </div>
               <div className="card-action">
-                <Link to="/dinner"> Dinner Recipes </Link>
+                <NavLink {...props} to={{ pathname: "/category", state: { category: "dinner" } }}> Dinner Recipes </NavLink>
+
               </div>
             </div>
           </div>
@@ -64,8 +70,9 @@ const Recipe = (props) => {
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
               </div>
-              <div className="card-action">
-                <Link to="/sweets"> Sweets Recipes </Link>
+              <div className="card-action" >
+                <NavLink {...props} to={{ pathname: "/category", state: { category: "sweets" } }}> Sweets Recipes </NavLink>
+
               </div>
             </div>
           </div>
