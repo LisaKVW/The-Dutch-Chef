@@ -27,7 +27,7 @@ const SingleRecipe = (props) => {
     <div>
       <h3>{myRecipe.title}</h3>
       {myRecipe.RecipeImgs.map((image, index) => {
-        return <img key={index} src={image.image} alt="food image" />
+        return <img key={index} src={image.image} alt="food image" style={{ width: "35%", borderRadius: "5px" }} />
       })}
       <p>{myRecipe.ingredients}</p>
       <p>{myRecipe.instructions}</p>
