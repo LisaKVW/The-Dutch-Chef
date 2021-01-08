@@ -29,11 +29,11 @@ const SingleRecipe = (props) => {
       {myRecipe.RecipeImgs.map((image, index) => {
         return <img key={index} src={image.image} alt="food image" style={{ width: "35%", borderRadius: "5px" }} />
       })}
-      <ul>
+      <ul style={{ display: "inline-block", textAlign: "left" }}>
         <span style={{ fontWeight: "bold" }}> Ingredients: </span>
         {myRecipe.ingredients.map((ingr) => <li>  {ingr} </li>)}
       </ul>
-      <ul>
+      <ul style={{ display: "inline-block", textAlign: "left" }}>
         <span style={{ fontWeight: "bold" }}> Instructions: </span>
         {myRecipe.instructions.map((instruction) => <li>  {instruction} </li>)}
       </ul>
