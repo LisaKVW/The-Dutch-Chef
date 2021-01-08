@@ -12,6 +12,7 @@ import Category from './pages/Category'
 import Navbar from './components/NavBar'
 import 'materialize-css/dist/css/materialize.min.css'
 import SingleStory from './pages/SingleStory'
+import Contact from './pages/Contact'
 
 function App(props) {
   const [recipes, setRecipes] = useState([])
@@ -106,6 +107,10 @@ function App(props) {
             path="/single-story/:story_id"
             component={SingleStory}
           />
+          <Route
+            path="/contact"
+            component={Contact}
+          />
         </Switch>
       </main>
     </div>
@@ -114,4 +119,3 @@ function App(props) {
 
 export default withRouter(App)
 
-//Source setting up: newsletter https://dev.to/itnext/setting-up-a-news-letter-with-react-and-mailchimp-2f6p 
