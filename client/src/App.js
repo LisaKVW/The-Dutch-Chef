@@ -13,6 +13,7 @@ import Navbar from './components/NavBar'
 import 'materialize-css/dist/css/materialize.min.css'
 import SingleStory from './pages/SingleStory'
 import Contact from './pages/Contact'
+import AboutMe from './pages/AboutMe'
 
 function App(props) {
   const [recipes, setRecipes] = useState([])
@@ -110,6 +111,10 @@ function App(props) {
           <Route
             path="/contact"
             component={Contact}
+          />
+          <Route
+            path="/About-me"
+            component={AboutMe}
           />
         </Switch>
       </main>
