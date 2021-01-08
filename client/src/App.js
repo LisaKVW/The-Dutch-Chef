@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { __GetRecipe } from './Services/RecipeService'
+import { __GetStories } from './Services/StoriesService'
 
 import './App.css';
 import { Switch, Route, withRouter } from 'react-router-dom'
@@ -17,6 +18,8 @@ function App(props) {
   const [lunches, setLunches] = useState([])
   const [dinners, setDinners] = useState([])
   const [sweets, setSweets] = useState([])
+  const [stories, setStories] = useState([])
+
   //set state for each catergory recipe, so we can grab the props from it throughout app
 
   useEffect(() => {
@@ -53,6 +56,25 @@ function App(props) {
   }
   // this done to shorten the below: <Category categories={categories} {...props} />}
 
+  // for STORIES props below
+  useEffect(() => {
+    const getStories = async (props) => {
+      let stories = []
+      const storyList = await __GetStories(props)
+      console.log(storyList)
+      storyList.forEach(story => {
+        stories.push(story)
+      })
+      setStories(stories)
+    }
+    getStories()
+  }, [])
+
+  const sendStory = {
+    stories
+  }
+
+
   return (
     <div className="App">
       <Navbar />
@@ -69,6 +91,7 @@ function App(props) {
           <Route
             path="/food-stories"
             component={Stories}
+            component={(props) => <Stories sendStory={sendStory} {...props} />}
           />
           <Route
             path="/category"
