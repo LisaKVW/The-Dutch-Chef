@@ -11,6 +11,7 @@ import SingleRecipe from './pages/SingleRecipe'
 import Category from './pages/Category'
 import Navbar from './components/NavBar'
 import 'materialize-css/dist/css/materialize.min.css'
+import SingleStory from './pages/SingleStory'
 
 function App(props) {
   const [recipes, setRecipes] = useState([])
@@ -100,6 +101,10 @@ function App(props) {
           <Route
             path="/recipe/:dish_id"
             component={SingleRecipe}
+          />
+          <Route
+            path="/single-story/:story_id"
+            component={SingleStory}
           />
         </Switch>
       </main>

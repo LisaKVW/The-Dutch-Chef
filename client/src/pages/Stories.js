@@ -31,12 +31,11 @@ const Stories = (props) => {
 
                 <div class="card" style={{ backgroundColor: "black" }}>
                   <div class="card-image" >
-                    <img src={ story.image} />
+                    <img src={story.image} />
                     <span class="card-title"> {story.title} </span>
                   </div>
                   <div class="card-action">
                     <NavLink to={{ pathname: `/single-story/${story.id}`, state: {} }}> See story </NavLink>
-                    {/* <NavLink title={category.title} to={{ pathname: "/recipe", state: {} }}> See Recipe </NavLink> */}
                   </div>
                 </div>
               </div>
