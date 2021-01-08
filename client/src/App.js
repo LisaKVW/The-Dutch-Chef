@@ -14,6 +14,7 @@ import 'materialize-css/dist/css/materialize.min.css'
 import SingleStory from './pages/SingleStory'
 import Contact from './pages/Contact'
 import AboutMe from './pages/AboutMe'
+import Footer from './components/Footer'
 
 function App(props) {
   const [recipes, setRecipes] = useState([])
@@ -81,7 +82,7 @@ function App(props) {
   return (
     <div className="App">
       <Navbar />
-      <main style={{ margin: "auto", width: "50 %", border: "3px", padding: "10px" }}>
+      <main style={{ margin: "auto", width: "50 %", border: "3px", padding: "10px", flex: "1 0 auto" }}>
         <Switch>
           <Route
             exact path="/"
@@ -118,6 +119,7 @@ function App(props) {
           />
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 }
