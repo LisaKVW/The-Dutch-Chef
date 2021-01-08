@@ -11,7 +11,7 @@ const SingleRecipe = (props) => {
   const getRecipe = async () => {
     try {
       const recipe = await __GetRecipeById(props.match.params.dish_id)
-      // console.log("recipe 2", recipe)
+      console.log("recipe 2", recipe)
       setMyRecipe(recipe)
     } catch (error) {
       throw error
@@ -29,8 +29,14 @@ const SingleRecipe = (props) => {
       {myRecipe.RecipeImgs.map((image, index) => {
         return <img key={index} src={image.image} alt="food image" style={{ width: "35%", borderRadius: "5px" }} />
       })}
-      <p> <span style={{ fontWeight: "bold" }}> Ingredients: </span> {myRecipe.ingredients}</p>
-      <p> <span style={{ fontWeight: "bold" }}> Instructions: </span>  {myRecipe.instructions}</p>
+      <ul>
+        <span style={{ fontWeight: "bold" }}> Ingredients: </span>
+        {myRecipe.ingredients.map((ingr) => <li>  {ingr} </li>)}
+      </ul>
+      <ul>
+        <span style={{ fontWeight: "bold" }}> Instructions: </span>
+        {myRecipe.instructions.map((instruction) => <li>  {instruction} </li>)}
+      </ul>
       <p> <span style={{ fontWeight: "bold" }}> Tips: </span>  {myRecipe.tips}</p>
     </div>
 
