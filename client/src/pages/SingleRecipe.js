@@ -44,7 +44,11 @@ const SingleRecipe = (props) => {
         {myRecipe.instructions.map((instruction) => <li style={{ marginLeft: "10px" }}>  {instruction} </li>)}
       </ul>
       <div style={{ display: "inline", textAlign: "left" }}>
-        <p > <span style={{ fontWeight: "bold" }}> Tips: </span>  {myRecipe.tips}</p>
+        {myRecipe.tips > 1 ? (
+          <p > <span style={{ fontWeight: "bold" }}> Tips: </span>  {myRecipe.tips}</p>
+        )
+          :
+          <div></div>}
       </div>
     </div>
   )
