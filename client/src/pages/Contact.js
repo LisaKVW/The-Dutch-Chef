@@ -6,7 +6,7 @@ const Contact = (props) => {
     <div>
       <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5.3vh", margin: "0 auto" }}>
         <section >
-          <img src="https://i.imgur.com/a1Z0lWa.jpg" style={{ width: "70%", marginTop: "22px", borderRadius: "6px" }} />
+          <img src="https://i.imgur.com/QyBIGFl.jpg" style={{ width: "70%", marginTop: "22px", borderRadius: "6px" }} />
         </section>
         <section className="contact-email">
           <h4> The Dutch Chef would love to hear your feedback!</h4>
