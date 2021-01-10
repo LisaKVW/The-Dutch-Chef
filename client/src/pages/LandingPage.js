@@ -21,6 +21,13 @@ const LandingPage = (props) => {
         <a class="carousel-item" href="#five!"><img src="https://i.imgur.com/vMwRsl8.jpg" /></a>
 
       </div>
+      <section style={{ margin: "2% 20% 20%", marginBottom: "2%" }}>
+        <div >
+          The Dutch Chef is your site to find tasty recipes to make at home and read food stories from mainly New York.
+          The Dutch Chef was created to cook together with your familiy and friends, and enjoy the experience of cooking, tasting, and creation of new memories.
+        </div>
+        <p> Enjoy the recipes and stories.</p>
+      </section>
     </div>
   )
 }
