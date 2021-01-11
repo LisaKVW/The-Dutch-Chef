@@ -38,7 +38,12 @@ module.exports = (sequelize, DataTypes) => {
         return this.getDataValue(value).split('\n')
       }
     },
-    tips: DataTypes.STRING,
+    tips: {
+    type: DataTypes.TEXT,
+    get: function (value) {
+      return this.getDataValue(value).split('\n')
+    }
+  },
     chefID: {
       type: DataTypes.INTEGER,
       field: 'chef_id',

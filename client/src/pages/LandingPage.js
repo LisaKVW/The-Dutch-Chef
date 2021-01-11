@@ -24,9 +24,9 @@ const LandingPage = (props) => {
       <section style={{ margin: "2% 20% 20%", marginBottom: "2%" }}>
         <div >
           The Dutch Chef is your site to find tasty recipes to make at home and read food stories from mainly New York.
-          The Dutch Chef was created to cook together with your familiy and friends, and enjoy the experience of cooking, tasting, and creation of new memories.
+          Besides finding recipes and stories, The Dutch Chef was created to inspire the joy of cooking (and eating) together with your familiy and friends.
         </div>
-        <p> Enjoy the recipes and stories.</p>
+        <p> Now - lets get our hands dirty, experiment with ingredients, make food you want to eat and lets create some food memories. </p>
       </section>
     </div>
   )
