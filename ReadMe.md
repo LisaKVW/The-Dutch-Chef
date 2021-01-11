@@ -49,12 +49,12 @@ Contact page
 
 
 ## Credits
-- https://www.lucidchart.com/pages
-- https://icons8.com/
-- https://www.invisionapp.com/freehand 
-- https://mailchimp.com/ API 
-- https://imgur.com 
-- https://materializecss.com/ 
+- ERD/Flow chart: https://www.lucidchart.com/pages
+- Icon/logo: https://icons8.com/
+- Wireframe: https://www.invisionapp.com/freehand 
+- API for newsletter: https://mailchimp.com/ 
+- Uploading images: https://imgur.com 
+- CSS: https://materializecss.com/ 
 
 ## Future updates
 - Video's of cooking/how to make the recipes

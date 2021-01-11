@@ -13,15 +13,14 @@ const RecipeTypes = (props) => {
     }
     getRecipeCategory()
   }, [])
-  
+
   // by adding props to NavLink - we made the location path available inside of props
   // Navlink is taking from our Category.js
-  console.log('breaky4', props)
   return (
     <div>
       <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5.3vh", margin: "0 auto" }}>
         <div className="row">
-          <div className="col s12 m7" style={{ width: "85%"}}>
+          <div className="col s12 m7" style={{ width: "85%" }}>
             <div className="card" style={{ backgroundColor: "black" }}>
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/3724/food-morning-breakfast-orange-juice.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
@@ -82,14 +81,3 @@ const RecipeTypes = (props) => {
 }
 
 export default RecipeTypes
-
-// {
-//   recipes.map((recipe) => {
-//     const { category } = recipe
-//     return (
-//       <div>
-//         <h2> {category} </h2>
-//       </div>
-//     )
-//   })
-// }

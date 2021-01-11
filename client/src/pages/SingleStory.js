@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { __GetStoryById } from '../Services/StoriesService'
 
 const SingleStory = (props) => {
-  console.log('line 5 single story', props.match)
   const [story, setStory] = useState(null)
   const [pageloaded, setLoaded] = useState(false)
 
@@ -13,7 +12,6 @@ const SingleStory = (props) => {
   const getStory = async () => {
     try {
       const story = await __GetStoryById(props.match.params.story_id)
-      console.log("get my story", story)
       setStory(story)
       setLoaded(true)
     } catch (error) {
