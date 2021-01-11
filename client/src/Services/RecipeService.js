@@ -16,7 +16,8 @@ export const __GetRecipe = async () => {
     const res = await ApiClient.get(`/recipe/view`)
     return res.data
   } catch (error) {
-    throw error
+    // throw error
+    console.log("log get recipe service",error)
   }
 }
 
