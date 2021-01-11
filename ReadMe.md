@@ -17,7 +17,8 @@ Site to find delicious recipes and restaurant stories through the eyes of the Du
 ![logos](./img/pern.png)
 
 ## How to get started
-Visit the site and view recipes and food stories. Like what you read? Signup to receive updates on new recipes and stories.
+Visit the site and view recipes and food stories. 
+Like what you read? Signup to receive updates on new recipes and stories.
 
 
 ## User Stories
@@ -36,6 +37,7 @@ Visit the site and view recipes and food stories. Like what you read? Signup to 
 
 ## Screenshots
 Screenshots of site:
+
 Landing Page
 ![wireframe](https://i.imgur.com/FaekGWu.png)
 Categories recipes
