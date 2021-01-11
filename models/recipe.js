@@ -39,11 +39,13 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     tips: {
-    type: DataTypes.TEXT,
-    get: function (value) {
-      return this.getDataValue(value).split('\n')
-    }
-  },
+      type: DataTypes.TEXT,
+      get: function (value) {
+        if (this.getDataValue(value)) {
+          return this.getDataValue(value).split('\n')
+        }
+      }
+    },
     chefID: {
       type: DataTypes.INTEGER,
       field: 'chef_id',
