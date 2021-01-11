@@ -57,5 +57,6 @@ Contact page
 - CSS: https://materializecss.com/ 
 
 ## Future updates
+- Find recipes via 'search' option
 - Video's of cooking/how to make the recipes
 - More stories and recipes!
