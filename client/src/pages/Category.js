@@ -45,7 +45,7 @@ const Category = (props) => {
                       // console.log(pict)
                       return <img src={image} />
                     })}
-                    <span class="card-title"> {dish.title} </span>
+                    <span class="card-title" style={{ color: "white" }}> {dish.title} </span>
                   </div>
                   <div class="card-action">
                     <NavLink to={{ pathname: `/recipe/${dish.id}`, state: {} }}> See Recipe </NavLink>
