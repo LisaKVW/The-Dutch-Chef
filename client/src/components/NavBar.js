@@ -17,7 +17,7 @@ const NavBar = (props) => {
         <div style={{ fontSize: "20px", fontWeight: "bolder", color: "grey" }} className="nav-wrapper pink lighten-4" >
           <a href="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></a>
 
-          <img style={{ verticalAlign: "middle" }} className="brand-logo" src="https://img.icons8.com/ios/50/fa314a/international-food.png" alt="food-icon" />
+          <img style={{ display: "inline-block", verticalAlign: "middle"}} className="brand-logo" src="https://img.icons8.com/ios/50/fa314a/international-food.png" alt="food-icon" />
           <ul id="nav-mobile" className="left hide-on-med-and-down" style={{ color: "black" }} >
             <li ><Link to="/">Home</Link></li>
             <li><Link to="/recipe-types">Recipes</Link></li>
@@ -28,7 +28,6 @@ const NavBar = (props) => {
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
-        {/* </nav> */}
 
         <ul id="slide-out" className="sidenav">
           <li><div className="user-view" style={{ marginBottom: "35%", marginRight: " 15%" }} >
