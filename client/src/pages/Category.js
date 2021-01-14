@@ -32,11 +32,10 @@ const Category = (props) => {
   // added ternary because - useEffect runs after the return - so without ternary we would have an empty page
   return (!pageloaded ? <div> loading... </div> :
     <div className="wrapper" style={{ margin: "0 auto" }}>
-      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", width: "80%", marginTop: "6vh", margin: "0 auto", gridGap: "3%" }}>
-
+      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", width: "80%", marginTop: "6vh", margin: "0 auto", columnGap: "4%", rowGap: "0" }}>
         {chosenCategory.map(dish => {
           return (
-            <div className="row">
+            <div className="row" style={{ gridGap: "2%" }}>
               <div className="card" style={{ backgroundColor: "black" }}>
                 <div className="card-image" >
                   {dish.RecipeImgs.map((pict) => {
