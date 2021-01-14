@@ -36,19 +36,21 @@ const Category = (props) => {
         {chosenCategory.map(dish => {
           return (
             <div className="row">
-              <div className="col s12 m7" style={{ width: "85%" }}>
+              <div className="col s12 m4" style={{ width: "85%" }}>
 
-                <div class="card" style={{ backgroundColor: "black" }}>
-                  <div class="card-image" >
+                <div className="card" style={{ backgroundColor: "black" }}>
+                  <div className="card-image" >
                     {dish.RecipeImgs.map((pict) => {
                       const { image } = pict
                       // console.log(pict)
                       return <img src={image} />
                     })}
-                    {/* <span class="card-title" style={{ color: "white" }}> {dish.title} </span> */}
-                  </div>
-                  <div class="card-action" style={{ padding: "3% 2%" }}>
-                    <NavLink to={{ pathname: `/recipe/${dish.id}`, state: {} }}>  {dish.title}  </NavLink>
+                    <div className="card-stacked" style={{ maxHeight: "100px", diplay: "inline-block" }}>
+                      {/* <span class="card-title" style={{ color: "white" }}> {dish.title} </span> */}
+                    </div>
+                    <div className="card-action" style={{ padding: "3% 2%" }}>
+                      <NavLink to={{ pathname: `/recipe/${dish.id}`, state: {} }}>  {dish.title}  </NavLink>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -31,7 +31,7 @@ const AboutMe = (props) => {
             The Dutch chef is a software engineer, with a +10 year background in the Culinary industry.
           </p>
           <p>
-            Her mom thought her most of her cooking skills and her family exposed her to food on daily base, and with that her passion for cooking (and eating) grew.
+            Her mom taught her most of her cooking skills and her family exposed her to food on daily base, and with that her passion for cooking (and eating) grew.
             From the Netherlands she started her international career in New York City at the 1 Michelin star Italian restaurant Del Posto. After her 1 year experience of top level culinary interaction her passion for the hospitality and people grew and she worked as a Food and Beverage manager at the Waldorf Astoria and the Peninsula Hotel New York.
           </p>
           <p>
