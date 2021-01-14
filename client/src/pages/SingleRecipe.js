@@ -26,7 +26,7 @@ const SingleRecipe = (props) => {
     <div className="recipe-wrap" style={{ width: "80%", borderRadius: "14px", border: "2px solid white", boxShadow: "1px 8px 8px 8px #eeeeee", marginLeft: "10%" }}>
       <h3>{myRecipe.title}</h3>
       {myRecipe.RecipeImgs.map((image, index) => {
-        return <img key={index} src={image.image} alt="food image" style={{ width: "35%", borderRadius: "5px", height:"35%" }} />
+        return <img key={index} src={image.image} alt="food image" style={{ width: "100%", borderRadius: "5px", display: "block" }} />
       })}
 
       <ul style={{ display: "inline", textAlign: "left" }}>
@@ -42,10 +42,10 @@ const SingleRecipe = (props) => {
         </div>
         {myRecipe.instructions.map((instruction) => <li style={{ marginLeft: "15px" }}>  {instruction} </li>)}
       </ul>
-      
+
       <ul style={{ display: "inline", textAlign: "left" }}>
         <div className="title-tips" style={{ marginTop: "8px" }}>
-        <span style={{ fontWeight: "bold", marginLeft: "10px" }}> Tips: </span>
+          <span style={{ fontWeight: "bold", marginLeft: "10px" }}> Tips: </span>
         </div>
         {myRecipe.tips.map((tip) => <li style={{ marginLeft: "15px" }} > {tip} </li>)}
       </ul>

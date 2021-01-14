@@ -19,7 +19,7 @@ const RecipeTypes = (props) => {
 
   return (
     <div>
-      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", width: "92%", marginTop: "6vh", margin: "0 auto", gridGap: "2%" }}>
+      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", width: "92%", marginTop: "6vh", margin: "0 auto", columnGap: "4%", rowGap: "0" }}>
         <div className="row">
           <div className="col s12 m7" style={{ width: "85%" }}>
             <div className="card" style={{ backgroundColor: "black" }}>
