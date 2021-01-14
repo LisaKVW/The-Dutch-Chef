@@ -10,9 +10,11 @@ const AboutMe = (props) => {
 
   return (
     <div>
-      <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5.3vh", margin: "0 auto", gridColumnGap: "2rem" }}>
+      {/* <div className="grid-wrap" style={{ display: "grid", gridTemplateColumns: "50% 50%", width: "80%", marginTop: "5.3vh", margin: "0 auto", gridColumnGap: "2rem" }}> */}
+      <h4 style={{ marginBottom: "0" }}> Who is the Dutch chef?</h4>
+      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", width: "92%", marginTop: "6vh", margin: "0 auto", gridGap: "2%" }}>
 
-        <section style={{ marginRight: "10%", marginTop: "12%" }}>
+        <section style={{ marginRight: "10%", marginTop: "0%" }}>
           < div class="carousel" >
             <a class="carousel-item" href="#one!"><img src="https://i.imgur.com/mJzggTA.jpg" style={{ width: "130%" }} /></a>
             <a class="carousel-item" href="#two!"><img src="https://i.imgur.com/ua1AIAy.jpg" style={{ width: "130%" }} /></a>
@@ -25,8 +27,7 @@ const AboutMe = (props) => {
           </div >
 
         </section>
-        <section className="contact-email" style={{ marginTop: "32px" }}>
-          <h4> Who is the Dutch chef?</h4>
+        <section className="contact-email" style={{ marginTop: "5%" }}>
           <p>
             The Dutch chef is a software engineer, with a +10 year background in the Culinary industry.
           </p>
