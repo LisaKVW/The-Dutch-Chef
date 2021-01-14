@@ -20,21 +20,19 @@ const Stories = (props) => {
 
 
   return (
-    <div className="wrapper" style={{ margin: "0 auto" }}>
-      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "33% 33% 33%", width: "80%", marginTop: "6vh", margin: "0 auto" }}>
+    <div className="wrapper" style={{ margin: "0 auto" }}>      {/* <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "33% 33% 33%", width: "80%", marginTop: "6vh", margin: "0 auto" }}> */}
+      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", width: "80%", marginTop: "6vh", margin: "0 auto", gridGap: "3%" }}>
+
         {stories.map(story => {
           return (
             <div className="row">
-              <div className="col s12 m7" style={{ width: "85%" }}>
-
-                <div class="card" style={{ backgroundColor: "black" }}>
-                  <div class="card-image" >
-                    <img src={story.image} />
-                    <span class="card-title"> {story.title} </span>
-                  </div>
-                  <div class="card-action">
-                    <NavLink to={{ pathname: `/single-story/${story.id}`, state: {} }}> See story </NavLink>
-                  </div>
+              <div class="card" style={{ backgroundColor: "black" }}>
+                <div class="card-image" >
+                  <img src={story.image} />
+                  <span class="card-title"> {story.title} </span>
+                </div>
+                <div class="card-action">
+                  <NavLink to={{ pathname: `/single-story/${story.id}`, state: {} }}> See story </NavLink>
                 </div>
               </div>
             </div>
