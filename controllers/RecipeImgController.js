@@ -1,13 +1,14 @@
 const { RecipeImg } = require('../models')
 
-  // / add /: recipe_id'
-//insomnia test- POST:  http://localhost:3004/api/image/add/recipe_id  -number is id of chef - so ALWAYS 1, only 1 chef
+// / add /: recipe_id'
+//insomnia test- POST:  http://localhost:3004/api/image/add/recipe_id  -number is id of recipe
 const CreateRecipeImg = async (req, res) => {
   try {
     const newPhoto = await RecipeImg.create(req.body)
     res.send(newPhoto)
   } catch (error) {
-    throw error
+    // throw error
+    console.log("heroku error img", error)
   }
 }
 
