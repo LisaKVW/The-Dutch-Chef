@@ -5,8 +5,8 @@ const { RecipeImg } = require('../models')
 //insomnia test- POST:  http://localhost:3004/api/recipe/1   -number is id of chef - so ALWAYS 1, only 1 chef
 const CreateRecipe = async (req, res) => {
   try {
-    const newRecipe = new Recipe({ ...req.body, recipe_id: req.params.recipe_id }) // we request the body of our page, and call our chef id - this to create a new chef inside chef parameters via the spread operator
-    newRecipe.save()  //then we save this new chef created and send that to our server
+    const newRecipe = await Recipe.create(req.body) // we request the body of our page, and call our chef id - this to create a new chef inside chef parameters via the spread operator
+    console.log(req.body, req.params)
     res.send(newRecipe)
   } catch (error) {
     throw error
