@@ -27,7 +27,7 @@ const SingleStory = (props) => {
   return (!pageloaded ? <div></div> :
     <div className="story-wrap" style={{ width: "80%", borderRadius: "14px", border: "2px solid white", boxShadow: "1px 8px 8px 8px #eeeeee", marginLeft: "10%" }}>
       <h3>{story.title}</h3>
-      <img src={story.image} alt="food image" style={{ width: "100%", borderRadius: "5px", display: "block" }} />
+      <img src={story.image} alt="food image" style={{ width: "52%", borderRadius: "5px", display: "center" }} />
       <p>{story.story}</p>
     </div>
 

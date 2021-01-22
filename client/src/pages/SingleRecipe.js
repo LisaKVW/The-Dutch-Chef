@@ -26,7 +26,7 @@ const SingleRecipe = (props) => {
     <div className="recipe-wrap" style={{ width: "80%", borderRadius: "14px", border: "2px solid white", boxShadow: "1px 8px 8px 8px #eeeeee", marginLeft: "10%" }}>
       <h3>{myRecipe.title}</h3>
       {myRecipe.RecipeImgs.map((image, index) => {
-        return <img key={index} src={image.image} alt="food image" style={{ width: "100%", borderRadius: "5px", display: "block" }} />
+        return <img key={index} src={image.image} alt="food image" style={{ width: "52%", borderRadius: "5px", display: "center" }} />
       })}
 
       <ul style={{ display: "inline", textAlign: "left" }}>
