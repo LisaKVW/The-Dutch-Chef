@@ -20,27 +20,57 @@ const Stories = (props) => {
 
 
   return (
-    <div className="wrapper" style={{ margin: "0 auto" }}>      {/* <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "33% 33% 33%", width: "80%", marginTop: "6vh", margin: "0 auto" }}> */}
-      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", width: "80%", marginTop: "6vh", margin: "0 auto", columnGap: "4%", rowGap: "0" }}>
-
-        {stories.map(story => {
-          return (
-            <div className="row">
-              <div class="card" style={{ backgroundColor: "black" }}>
-                <div class="card-image" >
-                  <img src={story.image} />
-                  <span class="card-title"> {story.title} </span>
-                </div>
-                <div class="card-action">
-                  <NavLink to={{ pathname: `/single-story/${story.id}`, state: {} }}> See story </NavLink>
-                </div>
-              </div>
-            </div>
-          )
-        })}
-      </div>
+    <div>
+      <h2>Apologies for the inconvenience, Chef is in the kitchen fine tuning her recipes. </h2>
     </div>
+
+    //     <div className="wrapper" style={{ margin: "0 auto" }}>      {/* <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "33% 33% 33%", width: "80%", marginTop: "6vh", margin: "0 auto" }}> */}
+    //       <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", width: "80%", marginTop: "6vh", margin: "0 auto", columnGap: "4%", rowGap: "0" }}>
+
+    //         {stories.map(story => {
+    //           return (
+    //             <div className="row">
+    //               <div class="card" style={{ backgroundColor: "black" }}>
+    //                 <div class="card-image" >
+    //                   <img src={story.image} />
+    //                   <span class="card-title"> {story.title} </span>
+    //                 </div>
+    //                 <div class="card-action">
+    //                   <NavLink to={{ pathname: `/single-story/${story.id}`, state: {} }}> See story </NavLink>
+    //                 </div>
+    //               </div>
+    //             </div>
+    //           )
+    //         })}
+    //       </div>
+    //     </div>
   )
 }
 
 export default Stories
+
+
+//   < div className = "wrapper" style = {{ margin: "0 auto" }}> {/* <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "33% 33% 33%", width: "80%", marginTop: "6vh", margin: "0 auto" }}> */ }
+//     < div className = "grid-hold" style = {{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", width: "80%", marginTop: "6vh", margin: "0 auto", columnGap: "4%", rowGap: "0" }}>
+
+//     {
+//       stories.map(story => {
+//         return (
+//           <div className="row">
+//             <div class="card" style={{ backgroundColor: "black" }}>
+//               <div class="card-image" >
+//                 <img src={story.image} />
+//                 <span class="card-title"> {story.title} </span>
+//               </div>
+//               <div class="card-action">
+//                 <NavLink to={{ pathname: `/single-story/${story.id}`, state: {} }}> See story </NavLink>
+//               </div>
+//             </div>
+//           </div>
+//         )
+//       })
+//     }
+//       </div >
+//     </div >
+//   )
+// }
