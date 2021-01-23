@@ -1,18 +1,25 @@
 const { Recipe } = require('../models')
 const { RecipeImg } = require('../models')
-import { recipe } from '../data/dataRecipeImg'
+import { recipesWithImgData } from '../data/dataRecipeImg'
 
 // CONTROLLER to post recipe and IMG to HEROKU
 const CreateRecipeWithImg = async (req, res) => {
   try {
-    const newRecipe = await Recipe.(req.body) // we request the body of our page, and call our chef id - this to create a new chef inside chef parameters via the spread operator
-    console.log(req.body, req.params)
-    res.send(newRecipe)
+    let RecipesToCreate = recipesWithImgData.map((recipeImg) => recipeImg[0])
+    const createdRecipes = await Recipe.bulkInsert(RecipesToCreate) // we request the body of our page, and call our chef id - this to create a new chef inside chef parameters via the spread operator
+    console.log(createdRecipes)
+    const recipeImgs = createdRecipes.map((recipe, i) => {
+      const { id: recipeId } = recipe
+      const { url } = RecipesToCreate[i].url
+    })
+    res.send(createdRecipes)
   } catch (error) {
     throw error
   }
 }
-
+// get 1 recipe need to find the matching image via: recipeId
+// recipeId?
+// at createRecipes creates recipe  - so will get id - that we can match
 
 //insomnia test- POST:  http://localhost:3004/api/recipe/1   -number is id of chef - so ALWAYS 1, only 1 chef
 const CreateRecipe = async (req, res) => {
@@ -84,5 +91,5 @@ module.exports = {
   GetAllRecipes,
   UpdateRecipe,
   DeleteRecipe,
-  CreateRecipeWithImg 
+  CreateRecipeWithImg
 }
