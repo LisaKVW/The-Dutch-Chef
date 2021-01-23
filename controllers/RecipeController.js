@@ -1,5 +1,17 @@
 const { Recipe } = require('../models')
 const { RecipeImg } = require('../models')
+import { recipe } from '../data/dataRecipeImg'
+
+// CONTROLLER to post recipe and IMG to HEROKU
+const CreateRecipeWithImg = async (req, res) => {
+  try {
+    const newRecipe = await Recipe.(req.body) // we request the body of our page, and call our chef id - this to create a new chef inside chef parameters via the spread operator
+    console.log(req.body, req.params)
+    res.send(newRecipe)
+  } catch (error) {
+    throw error
+  }
+}
 
 
 //insomnia test- POST:  http://localhost:3004/api/recipe/1   -number is id of chef - so ALWAYS 1, only 1 chef
@@ -28,16 +40,6 @@ const getOneRecipe = async (req, res) => {
   }
 }
 
-//in insomenia - GET: http://localhost:3004/api/recipe/view
-// const GetAllRecipes = async (req, res) => {
-//   try {
-//     const allRecipes = await Recipe.findAll()
-//     res.send(allRecipes)
-//   } catch (error) {
-//     throw error
-//   }
-// }
-//changed GetAllRecipes to the below, so that when we pull the info from back to front we instantly get the images
 const GetAllRecipes = async (req, res) => {
   try {
     const allRecipes = await Recipe.findAll({
@@ -81,5 +83,6 @@ module.exports = {
   getOneRecipe,
   GetAllRecipes,
   UpdateRecipe,
-  DeleteRecipe
+  DeleteRecipe,
+  CreateRecipeWithImg 
 }
