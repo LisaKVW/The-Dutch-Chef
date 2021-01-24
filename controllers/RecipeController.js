@@ -3,14 +3,17 @@ const { RecipeImg } = require('../models')
 import { recipesWithImgData } from '../data/dataRecipeImg'
 
 // CONTROLLER to post recipe and IMG to HEROKU
+////new   - path will be recipe/multi/:chef_id
 const CreateRecipeWithImg = async (req, res) => {
   try {
-    let RecipesToCreate = recipesWithImgData.map((recipeImg) => recipeImg[0])
-    const createdRecipes = await Recipe.bulkInsert(RecipesToCreate) // we request the body of our page, and call our chef id - this to create a new chef inside chef parameters via the spread operator
+    let RecipesToCreate = recipesWithImgData.map((recipeImg) => recipeImg[0])  // mapping through the array - now we get each full recipe, e.g. Banana Bread
+    const createdRecipes = await Recipe.bulkInsert(RecipesToCreate)  //create vairable that will insert all our data
     console.log(createdRecipes)
-    const recipeImgs = createdRecipes.map((recipe, i) => {
-      const { id: recipeId } = recipe
-      const { url } = RecipesToCreate[i].url
+    const recipeImgs = createdRecipes.map((recipe, i) => { // to get the images, we need to map through all uur recipes, this as the images are in the 2nd object of each recipe array
+      const { id: recipeId } = recipe // we deconstruct recipe and rename id TO recipeId
+      const { url } = RecipesToCreate[i].url // fto get the recipeImg - we need to the deconstrcution
+      // now we want to return all recipes 
+      //with those created recipes - we want to return (res) the matching image, which we can find via recipeId
     })
     res.send(createdRecipes)
   } catch (error) {
