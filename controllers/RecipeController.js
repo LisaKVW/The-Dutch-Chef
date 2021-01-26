@@ -10,12 +10,14 @@ const CreateRecipeWithImg = async (req, res) => {
     const createdRecipes = await Recipe.bulkInsert(RecipesToCreate)  //create vairable that will insert all our data
     console.log(createdRecipes)
     const recipeImgs = createdRecipes.map(async (recipe, i) => { // to get the images, we need to map through all our recipes, this as the images are in the 2nd object of each recipe array
-      const { id: recipeId } = recipe // we deconstruct recipe and rename id TO recipeId
-      const url = RecipesToCreate[i][1]['url'] // to get the recipeImg - we need to the deconstrcution
-      let newImage = await Promise.all(RecipeImg.create({ url: url, id: recipeId }))
-      return newImage
-      // now we want to return all recipes 
-      //with those created recipes - we want to return (res) the matching image, which we can find via recipeId
+      try {
+        const { id: recipeId } = recipe // we deconstruct recipe and rename id TO recipeId
+        const url = RecipesToCreate[i][1]['url'] // to get the recipeImg - we need to the deconstrcution
+        let newImage = await Promise.all(RecipeImg.create({ url: url, id: recipeId }))
+        return newImage
+      } catch (error) {
+        console.log('error for 2nd async', error)
+      }
     })
     console.log('image text', recipeImgs)
     res.send({ createdRecipes: createdRecipes, recipeImgs: recipeImgs })
