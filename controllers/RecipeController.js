@@ -9,7 +9,7 @@ const CreateRecipeWithImg = async (req, res) => {
     let RecipesToCreate = recipesWithImgData.map((recipeArray) => recipeArray[0])  // mapping through the array - now we get each full recipe, e.g. Banana Bread
     const createdRecipes = await Recipe.bulkInsert(RecipesToCreate)  //create vairable that will insert all our data
     console.log(createdRecipes)
-    const recipeImgs = await createdRecipes.map((recipe, i) => { // to get the images, we need to map through all our recipes, this as the images are in the 2nd object of each recipe array
+    const recipeImgs = createdRecipes.map(async (recipe, i) => { // to get the images, we need to map through all our recipes, this as the images are in the 2nd object of each recipe array
       const { id: recipeId } = recipe // we deconstruct recipe and rename id TO recipeId
       const url = RecipesToCreate[i][1]['url'] // to get the recipeImg - we need to the deconstrcution
       let newImage = await Promise.all(RecipeImg.create({ url: url, id: recipeId }))
