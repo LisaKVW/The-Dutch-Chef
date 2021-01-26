@@ -1,6 +1,6 @@
+import { recipesWithImgData } from '../data/dataRecipeImg'
 const { Recipe } = require('../models')
 const { RecipeImg } = require('../models')
-import { recipesWithImgData } from '../data/dataRecipeImg'
 
 // CONTROLLER to post recipe and IMG to HEROKU
 ////new   - path will be recipe/multi/:chef_id
