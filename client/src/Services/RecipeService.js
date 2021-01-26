@@ -1,5 +1,16 @@
 import ApiClient from './ApiClient'
 
+//NEW for all recipes
+// create all recipes with image recipe/multi/:chef_id
+export const __PostRecipesWithImgs = async (formData, userId) => {
+  try {
+    const res = await ApiClient.post(`/recipe/multi/${userId}`, formData)
+    return res.data
+  } catch (error) {
+    console.log('post all recipe with Imgs Heroku', error)
+  }
+}
+
 // this to AddNew Recipe
 export const __UploadRecipe = async (formData, userId) => {
   try {
@@ -17,7 +28,7 @@ export const __GetRecipe = async () => {
     return res.data
   } catch (error) {
     // throw error
-    console.log("log get recipe service",error)
+    console.log("log get recipe service", error)
   }
 }
 
