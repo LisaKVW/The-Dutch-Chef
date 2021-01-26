@@ -1,8 +1,8 @@
-const { recipesWithImgData } = require('../data/dataRecipeImg')
+const {recipesWithImgData}= require('../data/dataRecipeImg')
 const { Recipe } = require('../models')
 const { RecipeImg } = require('../models')
 
-// CONTROLLER to post recipe and IMG to HEROKU
+// CONTROLLER to post recipe and IMG to HEROKU new 
 ////new   - path will be recipe/multi/:chef_id
 const CreateRecipeWithImg = async (req, res) => {
   try {

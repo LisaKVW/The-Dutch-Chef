@@ -1,5 +1,5 @@
 
-export const recipesWithImgData = [
+const recipesWithImgData = [
   //BANANA BREAD
   [
     {
@@ -8,11 +8,11 @@ export const recipesWithImgData = [
       ingredients: "- 1 stick of melted butter (115 grams) + extra for greasing your baking tin.\n - 1 cup granulated sugar.\n - 2 large eggs\n - quarter cup whole milk (60 ml)\n - 1 teaspoon vanilla extract - or one fresh vanilla pod\n - 3 medium (very) ripe bananas.\n - 2 cups sifted all-purpose flour.\n - 1 teaspoon bakingsoda\n - half teaspoon baking powder\n - teaspoon cinnamon (optional)\n - quarter teaspoon salt\n - extra (optional)  1/2 - 3/4 cup chocolate chips, or some nutella or peanut butter swirls (about half cup). I recommend to do chocolate chips/nuts OR the swirls, doing both gets a bit crowded and makes it a dense bread.",
       instructions: "1. Pre-heat the oven at 350°F, and have a rack one level lower than the middle.\n 2. Grease a 8 x 5 loaf pan with butter, and lightly coat it with flour, this to avoid sticking to the pan. The additional flour shake it out of the pan.\n 3. Melt the butter, once melted add the sugar in a stand mixer. You also do this by hand, make sure you whisk it well, it needs to become a light buttery fluffy sugar mix.\n 4. Add 1 egg at the time, whisk each egg well in the batter.\n 5. Add the milk and vanilla extract - whisk.\n 6. Mash your bananas in a separate bowl, you can smash them till fine puree or leave it a bit chunky - whatever you prefer. Once smashed to your desire, whisk in the bananas.\n 7. Add the sifted flour, baking soda, baking powder and salt - and fold it into your batter with a spatula. Do not over mix, just make sure you do not see any dry spots of flour.\n 8. Optional - add your chocolate chips and/or nuts.\n 9. Pour the batter in the loaf pan - if you like to add nutella or peanut butter swirls, add these now. Dollop about 6-8 teaspoons spread out on top of your batter, and mix in gently with tip of a knife.\n 10. Bake for 55-65 minutes. Test your bread by poking it  in the middle with a cake tester or skewer, the tester/skewer should come out dry (and some gooey chocolate bits if used chocolate chips/nutella/peanut butter).\n 11. When done take it out of the oven, let it rest in the  bread pan for +- 15-20 minutes.\n 12. Gently take out your banana bread, by flipping it on a plate or cutting board.\n 13. Slice your warm Banana bread and enjoy with some butter!",
       tips: "Make it a chocolate banana bread, add 2 table spoons of coco powder when adding your flour etc. (step 7)",
-    }, 
-    { 
+    },
+    {
       url: "https://i.imgur.com/Wrdle7W.jpg",
-      recipeId: null 
-    } 
+      recipeId: null
+    }
   ],
 
   // GRILLED CHEESE DINNER
@@ -178,7 +178,7 @@ export const recipesWithImgData = [
   }, { url: "https://i.imgur.com/BqKVJBG.jpg", recipeId: null }],
 ]
 
-// module.exports = recipesWithImgData
+module.exports = recipesWithImgData
 
 
 // export const category = [
