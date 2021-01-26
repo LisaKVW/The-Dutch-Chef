@@ -6,16 +6,19 @@ import { recipesWithImgData } from '../data/dataRecipeImg'
 ////new   - path will be recipe/multi/:chef_id
 const CreateRecipeWithImg = async (req, res) => {
   try {
-    let RecipesToCreate = recipesWithImgData.map((recipeImg) => recipeImg[0])  // mapping through the array - now we get each full recipe, e.g. Banana Bread
+    let RecipesToCreate = recipesWithImgData.map((recipeArray) => recipeArray[0])  // mapping through the array - now we get each full recipe, e.g. Banana Bread
     const createdRecipes = await Recipe.bulkInsert(RecipesToCreate)  //create vairable that will insert all our data
     console.log(createdRecipes)
-    const recipeImgs = createdRecipes.map((recipe, i) => { // to get the images, we need to map through all uur recipes, this as the images are in the 2nd object of each recipe array
+    const recipeImgs = createdRecipes.map((recipe, i) => { // to get the images, we need to map through all our recipes, this as the images are in the 2nd object of each recipe array
       const { id: recipeId } = recipe // we deconstruct recipe and rename id TO recipeId
-      const { url } = RecipesToCreate[i].url // fto get the recipeImg - we need to the deconstrcution
+      const url = RecipesToCreate[i][1]['url'] // to get the recipeImg - we need to the deconstrcution
+      const newImage = await RecipeImg.create({ url: url, id: recipeId })
+      return newImage
       // now we want to return all recipes 
       //with those created recipes - we want to return (res) the matching image, which we can find via recipeId
     })
-    res.send(createdRecipes)
+    console.log('image text', recipeImgs)
+    res.send({ createdRecipes: createdRecipes, recipeImgs: recipeImgs })
   } catch (error) {
     throw error
   }
