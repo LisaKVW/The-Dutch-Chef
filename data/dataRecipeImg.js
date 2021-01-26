@@ -1,5 +1,5 @@
 
-export const recipesWithImgData = [
+const recipesWithImgData = [
   //BANANA BREAD
   [
     {
@@ -177,6 +177,8 @@ export const recipesWithImgData = [
     tips: "I love eating this stew with a nice herby couscous, but will also be great with some rice or some pita bread to dip",
   }, { url: "https://i.imgur.com/BqKVJBG.jpg", recipeId: null }],
 ]
+
+module.exports = recipesWithImgData
 
 
 // export const category = [
