@@ -8,6 +8,6 @@ Router.put('/:recipe_id', controller.UpdateRecipe)
 Router.delete('/:recipe_id', controller.DeleteRecipe)
 
 //new   - path will be recipe/multi/:chef_id
-Router.post('/mutli/:chef_id', controller.CreateRecipeWithImg)
+Router.post('/multi/:chef_id', controller.CreateRecipeWithImg)
 
 module.exports = Router
