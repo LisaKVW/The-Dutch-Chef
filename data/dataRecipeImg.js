@@ -1,5 +1,5 @@
 
-const recipesWithImgData = [
+export default recipesWithImgData = [
   //BANANA BREAD
   [
     {
@@ -178,7 +178,7 @@ const recipesWithImgData = [
   }, { url: "https://i.imgur.com/BqKVJBG.jpg", recipeId: null }],
 ]
 
-module.exports = recipesWithImgData
+// module.exports = recipesWithImgData
 
 
 // export const category = [
