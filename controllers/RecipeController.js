@@ -1,4 +1,4 @@
-const {recipesWithImgData}= require('../data/dataRecipeImg')
+const { recipesWithImgData } = require('../data/dataRecipeImg')
 const { Recipe } = require('../models')
 const { RecipeImg } = require('../models')
 
