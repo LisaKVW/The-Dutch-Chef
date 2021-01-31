@@ -29,6 +29,7 @@ function App(props) {
   useEffect(() => {
     const getRecipe = async (props) => {
       const recipeList = await __GetRecipe(props)
+      console.log('__GetRecipe', __GetRecipe(props))
       let breakfasts = []
       let lunches = []
       let dinners = []
@@ -82,7 +83,7 @@ function App(props) {
   return (
     <div className="App">
       <Navbar />
-      <main style={{ display: "flex", margin: "auto", width: "50 %", border: "3px", padding: "10px", flex: "1 0 auto"}}>
+      <main style={{ display: "flex", margin: "auto", width: "50 %", border: "3px", padding: "10px", flex: "1 0 auto" }}>
         <Switch>
           <Route
             exact path="/"

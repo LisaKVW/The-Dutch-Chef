@@ -25,6 +25,7 @@ export const __UploadRecipe = async (formData, userId) => {
 export const __GetRecipe = async () => {
   try {
     const res = await ApiClient.get(`/recipe/view`)
+    console.log('log GetRecipe rserice res',res)
     return res.data
   } catch (error) {
     // throw error
