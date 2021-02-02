@@ -17,9 +17,6 @@ module.exports = {
         require: true
       }
     },
-    // define: {
-    //   underscored: true,
-    // }
     freezeTableName: false, // Model tableName will be the same as the model name
     timestamps: false,
     underscored: true
