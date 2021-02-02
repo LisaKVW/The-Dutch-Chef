@@ -35,7 +35,7 @@ const NavBar = (props) => {
       </nav>
 
       <ul id="slide-out" className="sidenav">
-        <li><div className="user-view" style={{ marginBottom: "35%", marginRight: " 15%" }} >
+        <li><div className="user-view" style={{ position: "static" }} >
           <img className="brand-logo" src="https://img.icons8.com/ios/50/fa314a/international-food.png" alt="food-icon" />
         </div></li>
         <li className="sidenav-close" ><Link to="/">Home</Link></li>
