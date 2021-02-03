@@ -29,20 +29,20 @@ module.exports = (sequelize, DataTypes) => {
     ingredients: {
       type: DataTypes.TEXT,
       get: function (value) {
-        return this.getDataValue(value).split('\n')
+        return this.getDataValue(value).split('  ')
       }
     },
     instructions: {
       type: DataTypes.TEXT,
       get: function (value) {
-        return this.getDataValue(value).split('\n')
+        return this.getDataValue(value).split('  ')
       }
     },
     tips: {
       type: DataTypes.TEXT,
       get: function (value) {
         if (this.getDataValue(value)) {
-          return this.getDataValue(value).split('\n')
+          return this.getDataValue(value).split('  ')
         }
       }
     },

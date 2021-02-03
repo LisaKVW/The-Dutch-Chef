@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     story: {
       type: DataTypes.TEXT,
       get: function (value) {
-        return this.getDataValue(value).split('\n')
+        return this.getDataValue(value).split('  ')
       }
     },
     image: DataTypes.STRING,
