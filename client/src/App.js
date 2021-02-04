@@ -83,7 +83,7 @@ function App(props) {
   return (
     <div className="App">
       <Navbar />
-      <main style={{ display: "flex", margin: "auto", width: "100 %", border: "3px", padding: "10px", flex: "1 0 auto" }}>
+      <main style={{ display: "flex", margin: "auto", width: "100 %", border: "3px", padding: "10px", justifyContent: "center" }}>
         <Switch>
           <Route
             exact path="/"

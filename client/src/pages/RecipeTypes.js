@@ -18,10 +18,10 @@ const RecipeTypes = (props) => {
   // Navlink is taking from our Category.js
 
   return (
-    <div className="recipe-types-wrap" style={{ display: "inline-block", marginRight: "0%" }}>
-      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", width: "92%", marginTop: "6vh", margin: "0", columnGap: "3%", rowGap: "0" }}>
-        <div className="row" style={{ margin: "auto", padding: "auto" }}>
-          <div className="col s12 m7" style={{ width: "85%" }}>
+    <div className="recipe-types-wrap" style={{ display: "flex", marginRight: "0 auto", justifyContent: "center" }}>
+      <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", width: "92%", marginTop: "6vh", margin: "0", columnGap: "1%", rowGap: "0" }}>
+        <div className="row" style={{ margin: "auto", padding: "auto", display: "flex", justifyContent: "center" }}>
+          <div className="col s12 m7" style={{ width: "85%", margin: "0" }}>
             <div className="card" style={{ backgroundColor: "black" }}>
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/3724/food-morning-breakfast-orange-juice.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
@@ -34,8 +34,8 @@ const RecipeTypes = (props) => {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col s12 m7" style={{ width: "85%" }}>
+        <div className="row" style={{ margin: "auto", padding: "auto", display: "flex", justifyContent: "center" }}>
+          <div className="col s12 m7" style={{ width: "85%", margin: "0" }}>
             <div className="card" style={{ backgroundColor: "black" }}>
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
@@ -48,8 +48,8 @@ const RecipeTypes = (props) => {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col s12 m7" style={{ width: "85%" }}>
+        <div className="row" style={{ margin: "auto", padding: "auto", display: "flex", justifyContent: "center" }}>
+          <div className="col s12 m7" style={{ width: "85%", margin: "0" }}>
             <div className="card" style={{ backgroundColor: "black" }}>
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
@@ -62,8 +62,8 @@ const RecipeTypes = (props) => {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col s12 m7" style={{ width: "85%" }}>
+        <div className="row" style={{ margin: "auto", padding: "auto", display: "flex", justifyContent: "center" }}>
+          <div className="col s12 m7" style={{ width: "85%", margin: "0" }}>
             <div className="card" style={{ backgroundColor: "black" }}>
               <div className="card-image">
                 <img src="https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
