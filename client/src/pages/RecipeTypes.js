@@ -18,7 +18,7 @@ const RecipeTypes = (props) => {
   // Navlink is taking from our Category.js
 
   return (
-    <div className="recipe-types-wrap" style={{ display: "inline-block", marginLeft: "11%", marginRight:"0%" }}>
+    <div className="recipe-types-wrap" style={{ display: "inline-block", marginRight: "0%" }}>
       <div className="grid-hold" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", width: "92%", marginTop: "6vh", margin: "0", columnGap: "3%", rowGap: "0" }}>
         <div className="row" style={{ margin: "auto", padding: "auto" }}>
           <div className="col s12 m7" style={{ width: "85%" }}>

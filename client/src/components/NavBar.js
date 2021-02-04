@@ -13,7 +13,7 @@ const NavBar = (props) => {
 
   return (
     <div >
-      <nav >
+      <nav style={{ width: '100vw' }}>
         <div style={{ fontSize: "20px", fontWeight: "bolder", color: "grey" }} className="nav-wrapper pink lighten-4" >
           <a href="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></a>
 
