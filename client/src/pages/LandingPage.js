@@ -26,7 +26,7 @@ const LandingPage = (props) => {
           The Dutch Chef is your site to find tasty recipes to make at home and read food stories from mainly New York.
           Besides finding recipes and stories, The Dutch Chef was created to inspire the joy of cooking (and eating) together with your familiy and friends.
         </div>
-        <p> Now - lets get our hands dirty, experiment with ingredients, make food you want to eat and lets create some food memories. </p>
+        <p> Now - let's get our hands dirty, experiment with ingredients, make food you want to eat and let's create some food memories. </p>
       </section>
     </div>
   )
